@@ -1,0 +1,32 @@
+{
+  "name": "ukraineneedyougulp",
+  "version": "1.0.0",
+  "description": "Gulp FE Start Project",
+  "scripts": {
+    "dev": "gulp watch",
+    "build:dev": "gulp build",
+    "build:prod": "gulp build --prod"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm test"
+    }
+  },
+  "keywords": [],
+  "type": "module",
+  "author": "Vitalii Vashkevych",
+  "license": "WTFPL",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/register": "^7.24.6",
+    "eslint": "^9.11.1",
+    "gulp": "^5.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10"
+  }
+}
