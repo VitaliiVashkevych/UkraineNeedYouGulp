@@ -1,7 +1,8 @@
 {
-  "name": "ukraineneedyougulp",
+  "name": "gulp-frontend-start-project",
   "version": "1.0.0",
-  "description": "Gulp FE Start Project",
+  "description": "Gulp frontend start project",
+  "type": "module",
   "scripts": {
     "dev": "gulp watch",
     "build:dev": "gulp build",
@@ -12,21 +13,24 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+      "pre-commit": "lint-staged"
     }
   },
   "keywords": [],
-  "type": "module",
   "author": "Vitalii Vashkevych",
   "license": "WTFPL",
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
-    "@babel/register": "^7.24.6",
-    "eslint": "^9.11.1",
-    "gulp": "^5.0.0",
-    "husky": "^9.1.6",
-    "lint-staged": "^15.2.10"
+    "@babel/core": "^7.12.13",
+    "@babel/eslint-parser": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/register": "^7.12.13",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "gulp": "^4.0.2",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4"
   }
 }

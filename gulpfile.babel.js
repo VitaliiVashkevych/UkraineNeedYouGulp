@@ -1,12 +1,15 @@
-import gulp from "gulp";
-import config from "./gulp/config.js";
+import gulp from 'gulp';
+import clean from './gulp/tasks/clean.js';
+import server from './gulp/tasks/server.js';
+import config from './gulp/config.js';
 
 config.setEnv();
 
-gulp.task('build', () => {
-  console.log(config.isProd);
-})
+export const build = gulp.series(
+  clean,
+);
 
-gulp.task('watch', () => {
-  console.log(config.isProd);
-})
+export const watch = gulp.series(
+  build,
+  server,
+);
