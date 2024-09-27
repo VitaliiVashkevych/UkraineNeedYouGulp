@@ -1,27 +1,10 @@
-import browserSync from 'browser-sync';
-import config from '../config.js';
-
-const server = (callback) => {
-  browserSync.create().init({
+export const server = (done) => {
+  app.plugins.browserSync.init({
     server: {
-      baseDir: config.dest.root,
+      baseDir: `${app.path.build.html}`
     },
-    files: [
-      `${config.dest.html}/*.html`,
-      `${config.dest.css}/*.css`,
-      `${config.dest.js}/*.js`,
-      {
-        match: `${config.dest.images}/**/*`,
-        fn() {
-          this.reload();
-        },
-      },
-    ],
-    open: false,
     notify: false,
+    port: 3000
   });
-
-  callback();
-};
-
-export default server;
+  done();
+}
